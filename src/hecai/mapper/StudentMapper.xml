@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="hecai.mapper.StudentMapper">
+	
+	<select id="queryStudentByStuno" parameterType="int" resultType="Student">
+		select * from stu where stuno = #{stuNo}
+	</select>
+	
+	<insert id="addStudent" parameterType="hecai.entity.Student">
+		insert into stu(stuno, stuname, stuage) value(#{stuNo}, #{stuName}, #{stuAge});
+	</insert>
+
+</mapper>
